@@ -13,12 +13,12 @@
 
 ### Steps for genetic algortihm
 
-[x] Define Genes
-[x] Define DNA
-[x] Define Population
+- [x] Define Genes
+- [x] Define DNA
+- [x] Define Population
 
 ### Evolution
  
-[x] Calculate Fitness
-- Natural Selection
-- Generate/ Reproduce New population
+- [x] Calculate Fitness
+- [ ] Natural Selection
+- [ ] Generate/ Reproduce New population
