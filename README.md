@@ -20,5 +20,5 @@
 ### Evolution
  
 - [x] Calculate Fitness
-- [ ] Natural Selection
-- [ ] Generate/ Reproduce New population
+- [x] Natural Selection
+- [x] Generate/ Reproduce New population
