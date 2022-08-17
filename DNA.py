@@ -2,6 +2,7 @@ import random
 import string
 
 letters = string.ascii_lowercase + string.ascii_uppercase + "." + " " + "," 
+random.seed(27)
 
 
 class DNA:
@@ -25,3 +26,8 @@ class DNA:
 
 	def get_str(self):
 		return ''.join(self.genes)
+
+	def mutate(self, mutation_rate):
+		for i in range(len(self.phrase)):
+			if random.random() < mutation_rate:
+				self.genes[i] = random.choice(letters)
