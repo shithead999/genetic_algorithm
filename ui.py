@@ -26,9 +26,9 @@ class App:
 		self.blFrame = Frame(self.bottomF)
 
 		self.bll1 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.best_fit, padx=2, pady=2, font=("monospace", 15))
-		self.bll1.pack()
+		self.bll1.pack(fill=X)
 		self.bll3 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.generation, padx=2, pady=2, font=("monospace", 15))
-		self.bll3.pack()
+		self.bll3.pack(fill=X)
 
 		self.blFrame.pack(side=LEFT, padx = 20, pady = 20, fill=BOTH)
 		
@@ -50,3 +50,30 @@ class App:
 		self.bottomF.pack(side=BOTTOM)
 
 		self.mainF.pack()
+
+class StartApp:
+	def __init__(self, root):
+		self.root = root
+		self.phrase = StringVar()
+		self.mutation_rate = StringVar()
+		self.popsize = IntVar()
+		self.draw_ui()
+
+	def draw_ui(self):
+		f1 = Frame(self.root)
+		Label(f1, anchor="w", justify="left", text="Phrase: ", font = ("monospace", 10)).pack(side=LEFT, fill=BOTH)
+		e = Entry(f1, textvariable=self.phrase, font = ("monospace", 10))
+		e.pack(side = RIGHT)
+		f1.pack(fill=X, padx = 10, pady = 10)
+		f2 = Frame(self.root)
+		Label(f2, text="Mutation Rate: ", font = ("monospace", 10)).pack(side=LEFT, fill=BOTH)
+		e1 = Entry(f2, textvariable=self.mutation_rate, font = ("monospace", 10))
+		e1.pack(side = RIGHT, fill=X)
+		f2.pack(fill=X, padx = 10, pady = 10)
+		f3 = Frame(self.root)
+		Label(f3, text="Population Size: ", font = ("monospace", 10)).pack(side=LEFT, fill=BOTH)
+		e2 = Entry(f3, textvariable=self.popsize, font = ("monospace", 10))
+		e2.pack(side = RIGHT, fill=X)
+		f3.pack(fill=X, padx = 10, pady = 10)
+		b = Button(self.root, text="Start", command=self.root.destroy)
+		b.pack()
