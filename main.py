@@ -1,14 +1,17 @@
 from DNA import DNA
 from population import Population
 import time
-from tkinter import Tk
-from ui import App
+from tkinter import Tk, StringVar, IntVar
+from ui import App, StartApp
 import math
 
-# variables
-phrase = "Switch to God Mode."
-pop_size = 1000
-mutation_rate = 0.01
+start = Tk()
+startapp = StartApp(start)
+start.mainloop()
+
+phrase = "Hello, World" if startapp.phrase.get().strip() == "" else startapp.phrase.get()
+pop_size = 1000 if startapp.popsize.get() == 0 else startapp.popsize.get()
+mutation_rate = 0.01 if startapp.mutation_rate.get().strip() == "" else float(startapp.mutation_rate.get())
 
 def main():
 	win = Tk()
@@ -22,9 +25,7 @@ def main():
 		p.generate()
 		app.best_fit.set("Best Fitness: " + str(math.floor(p.best_fitness*100)) + "%" )
 		app.generation.set("Generation: " + str(p.generation))
-				
 		p.show_pop()
-		time.sleep(0.2)
 	win.mainloop()
 
 
