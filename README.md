@@ -17,8 +17,11 @@
 - [x] Define DNA
 - [x] Define Population
 
-### Evolution
+### Development Steps
  
 - [x] Calculate Fitness
 - [x] Natural Selection
 - [x] Generate/ Reproduce New population
+- [ ] Add time selection entry box to control time.sleep in loop
+- [ ] Add colors and improve style of tkinter UI
+- [ ] Replace python array's with numpy array for better speed
