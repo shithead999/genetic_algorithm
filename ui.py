@@ -57,6 +57,7 @@ class StartApp:
 		self.phrase = StringVar()
 		self.mutation_rate = StringVar()
 		self.popsize = IntVar()
+		self.timerun=StringVar()
 		self.draw_ui()
 
 	def draw_ui(self):
@@ -75,5 +76,10 @@ class StartApp:
 		e2 = Entry(f3, textvariable=self.popsize, font = ("monospace", 10))
 		e2.pack(side = RIGHT, fill=X)
 		f3.pack(fill=X, padx = 10, pady = 10)
+		f4 = Frame(self.root)
+		Label(f4, text="Time Run: ", font = ("monospace", 10)).pack(side=LEFT, fill=BOTH)
+		e3 = Entry(f4, textvariable=self.timerun, font = ("monospace", 10))
+		e3.pack(side = RIGHT, fill=X)
+		f4.pack(fill=X, padx = 10, pady = 10)
 		b = Button(self.root, text="Start", command=self.root.destroy)
 		b.pack()
