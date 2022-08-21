@@ -26,6 +26,7 @@ def main():
 		p.generate()
 		app.best_fit.set("Best Fitness: " + str(math.floor(p.best_fitness*100)) + "%" )
 		app.generation.set("Generation: " + str(p.generation))
+		time.sleep(timerun)
 		p.show_pop()
 	win.mainloop()
 
