@@ -10,8 +10,10 @@ class App:
 		self.l4 = StringVar()
 		self.l5 = StringVar()
 		self.generation = StringVar()
+		self.mutation_rate= StringVar()
 		self.best_fit = StringVar()
 		self.phrase = StringVar()
+		self.timerun= StringVar()	
 		self.best_phrase.set("Hello, World")
 		self.draw_ui()
 
@@ -29,6 +31,10 @@ class App:
 		self.bll1.pack(fill=X)
 		self.bll3 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.generation, padx=2, pady=2, font=("monospace", 15))
 		self.bll3.pack(fill=X)
+		self.bll4 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.mutation_rate, padx=2, pady=2, font=("monospace", 15))
+		self.bll4.pack(fill=X)
+		self.bll4 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.timerun, padx=2, pady=2, font=("monospace", 15))
+		self.bll4.pack(fill=X)
 
 		self.blFrame.pack(side=LEFT, padx = 20, pady = 20, fill=BOTH)
 		
