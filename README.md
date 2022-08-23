@@ -25,4 +25,4 @@
 - [x] Add time selection entry box to control time.sleep in loop
 - [ ] Add colors and improve style of tkinter UI
 - [ ] Replace python array's with numpy array for better speed
-- [ ] Below the generation add 2 more labels for pop size, mutation rate
+- [x] Below the generation add 2 more labels for pop size, mutation rate
