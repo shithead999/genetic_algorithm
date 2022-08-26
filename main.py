@@ -5,6 +5,7 @@ from tkinter import Tk, StringVar, IntVar
 from ui import App, StartApp
 import math
 
+
 start = Tk()
 startapp = StartApp(start)
 start.mainloop()
@@ -12,7 +13,7 @@ start.mainloop()
 phrase = "Hello, World" if startapp.phrase.get().strip() == "" else startapp.phrase.get()
 pop_size = 1000 if startapp.popsize.get() == 0 else startapp.popsize.get()
 mutation_rate = 0.01 if startapp.mutation_rate.get().strip() == "" else float(startapp.mutation_rate.get())
-timerun = "0.20" if startapp.timerun.get().strip()== ""else float(startapp.timerun.get())
+timerun = 0.20 if startapp.timerun.get().strip()== "" else float(startapp.timerun.get())
 
 def main():
 	win = Tk()
