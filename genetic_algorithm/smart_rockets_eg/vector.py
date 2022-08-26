@@ -1,5 +1,7 @@
 import math
 
+# implementation of vector class in code
+# consits of self-explanatory vector methods
 class Vector:
 	def __init__(self, x=1, y=1):
 		self.x = x
