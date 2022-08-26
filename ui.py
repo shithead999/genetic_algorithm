@@ -20,27 +20,27 @@ class App:
 	def draw_ui(self):	
 
 		self.mainF = Frame(self.root)
-		self.bplabel = Label(self.mainF, textvariable=self.best_phrase, padx=20, pady=20, font=("monospace", 20, "bold"))
+		self.bplabel = Label(self.mainF, textvariable=self.best_phrase, padx=20, pady=20, font=("segoe print", 26, "bold","underline"),fg="white",bg="black")
 		self.bplabel.pack(side=TOP, fill=X)
 
 		self.bottomF = Frame(self.mainF)
 
 		self.blFrame = Frame(self.bottomF)
 
-		self.bll1 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.best_fit, padx=2, pady=2, font=("monospace", 15))
+		self.bll1 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.best_fit,fg="white",bg="green", padx=2, pady=3, font=("monospace", 15),bd=5)
 		self.bll1.pack(fill=X)
-		self.bll3 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.generation, padx=2, pady=2, font=("monospace", 15))
+		self.bll3 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.generation,fg="white",bg="green", padx=2, pady=3, font=("monospace", 15))
 		self.bll3.pack(fill=X)
-		self.bll4 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.mutation_rate, padx=2, pady=2, font=("monospace", 15))
+		self.bll4 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.mutation_rate,fg="white",bg="green", padx=2, pady=3, font=("monospace", 15))
 		self.bll4.pack(fill=X)
-		self.bll4 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.timerun, padx=2, pady=2, font=("monospace", 15))
+		self.bll4 = Label(self.blFrame, anchor="w", justify="left", textvariable=self.timerun,fg="white",bg="green", padx=2, pady=3, font=("monospace", 15))
 		self.bll4.pack(fill=X)
 
 		self.blFrame.pack(side=LEFT, padx = 20, pady = 20, fill=BOTH)
 		
-		self.brFrame = Frame(self.bottomF)
+		self.brFrame = Frame(self.bottomF,bd=4,relief="ridge")
 		
-		self.brf1 = Label(self.brFrame, textvariable=self.l1, padx=2, pady=2, font=("monospace", 15))
+		self.brf1 = Label(self.brFrame, textvariable=self.l1, padx=2, pady=2, font=("monospace", 15),)
 		self.brf1.pack()
 		self.brf2 = Label(self.brFrame, textvariable=self.l2, padx=2, pady=2, font=("monospace", 15))
 		self.brf2.pack()
