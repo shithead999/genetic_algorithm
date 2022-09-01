@@ -24,20 +24,7 @@ class Population:
 			self.maxd = max(self.maxd, r.fitness) 
 			
 	def natural_selection(self):
-		self.matingPool = []
-		for r in self.population:
-			freq = math.floor((r.fitness/self.maxd)*100)
-			for i in range(freq):
-				self.matingPool.append(r)
+		pass
 
 	def generate(self):
-		for r in self.population:
-			self.c.delete(r.obj)
-		self.population = []
-		self.g_index = 0
-
-		for i in range(POP_SIZE):
-			pa = random.choice(self.matingPool)
-			pb = random.choice(self.matingPool)
-			offspring = Rocket.crossover_and_mutate(pa, pb, self.pillars)
-			self.population.append(offspring)
+		pass
