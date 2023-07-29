@@ -23,6 +23,6 @@
 - [x] Natural Selection
 - [x] Generate/ Reproduce New population
 - [x] Add time selection entry box to control time.sleep in loop
-- [ ] Add colors and improve style of tkinter UI
-- [ ] Replace python array's with numpy array for better speed
+- [x] Add colors and improve style of tkinter UI
+- [x] Replace python array's with numpy array for better speed
 - [x] Below the generation add 2 more labels for pop size, mutation rate
